@@ -21,3 +21,17 @@ int main() {
     
     return 0;
 }
+
+/*
+
+int numero;
+leia(numero);
+para(i de 0 até (2*numero), passo 2)
+{
+   se(i mod 2 == 0 && i!= 0)
+   {
+        imprima(i"\t");
+   }     
+}
+
+*/
