@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main()
+{
+    srand(time(0));
+    int tam, val, pos;
+    printf("Tam do vetor: ");
+    scanf("%d", &tam);
+    int v[tam];
+   
+    for(int i=0; i<tam; i++)
+    {
+        v[i] = rand()%1000;
+    }
+
+    printf("em qual posiçao quer substituir? ");
+    scanf("%d", &pos);
+    printf("Valor que quer colocar: ");
+    scanf("%d", &val);
+
+    tam++;
+    
+    for(int i = tam-1; i > pos+1; i--)
+    {
+        v[i+1] = v[i];  
+    }
+    
+    v[pos] = val;
+    
+    printf("\n\n");
+    for(int i=0; i<tam; i++)
+    {
+        printf("%d\n", v[i]);
+    }
+
+    return 0;
+}
